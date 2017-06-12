@@ -1,0 +1,23 @@
+<div class="p-c-s">
+  <!--{{ playlist }}-->
+  <div class="wrap">
+    <div class="cover">
+      <a href="" class="link">
+        <img ng-src="{{ playlist.coverImageSrc }}" alt="text">
+      </a>
+      <a href="" title="播放"></a>
+    </div>
+    <div class="circle"></div>
+    <div class="rect"></div>
+  </div>
+  <cite class="p-nm f-thide" title="{{ playlist.title }}">
+    <a href="">{{ playlist.title }}</a>
+  </cite>
+  <p class="u-nm f-thide">
+    <span ng-repeat="_mn in playlist.musicians">
+      <a href="">{{ _mn.musician }}</a>
+      <!--<a href="">{{ playlist.musicians[0].musician }}</a>-->
+      <i ng-hide="$last">/</i>
+    </span>
+  </p>
+</div>

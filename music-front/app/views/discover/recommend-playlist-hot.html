@@ -1,0 +1,25 @@
+<div class="r-p-h">
+  <div class="r-p-h-h">
+    <a class="head">热门推荐</a>
+    <div class="tab">
+      <a href="">华语</a>
+      <span class="split-line"></span>
+      <a href="">流行</a>
+      <span class="split-line"></span>
+      <a href="">摇滚</a>
+      <span class="split-line"></span>
+      <a href="">民谣</a>
+      <span class="split-line"></span>
+      <a href="">电子</a>
+    </div>
+    <span class="more">
+    <a href="">更多</a>
+    <i></i>
+  </span>
+  </div>
+  <div class="list">
+    <div ng-repeat="_playlist in rph.playlistHotList">
+      <playlist-cover playlist='_playlist'></playlist-cover>
+    </div>
+  </div>
+</div>

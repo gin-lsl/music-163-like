@@ -1,0 +1,96 @@
+.discover.outer-wrap {
+
+}
+
+.discover .wrap {
+  position: relative;
+  width: 990px;
+  margin: 0 auto;
+}
+
+.discover .switch-jumbotron {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 90px;
+  bottom: 100px;
+  line-height: 90px;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.discover .switch-jumbotron:hover {
+  background-color: rgba(90, 90, 90, 0.2);
+}
+
+.discover .prev-jumbotron {
+  left: -50px;
+}
+
+.discover .next-jumbotron {
+  right: -50px;
+}
+
+.discover .jumbotron {
+
+}
+
+.discover .download {
+  display: inline-block;
+  position: absolute;
+  width: 254px;
+  height: 336px;
+  background: url('/images/download.png');
+  box-shadow: 0 0 5px 3px rgba(4, 4, 4, 0.8);
+}
+
+.discover #side-download {
+  display: block;
+  width: 215px;
+  height: 56px;
+  margin: 212px 0 0 19px;
+  text-indent: -9999px;
+}
+
+.discover #side-download:hover {
+  background: url('/images/download.png') 0 64px;
+}
+
+.discover .download p {
+  margin: 10px auto;
+  text-align: center;
+  color: #8d8d8d;
+  font-size: 13px;
+}
+
+.discover .dots {
+  position: absolute;
+  height: 20px;
+  bottom: 10px;
+  right: 50%;
+}
+
+.discover .dots a {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.discover .dots span {
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
+
+.discover .dots span.active {
+  background-color: white;
+}

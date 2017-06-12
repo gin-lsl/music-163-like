@@ -1,0 +1,116 @@
+{
+  "playlists": [
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover1.jpg",
+      "playCount": 19720000,
+      "text": "麻麻，我想和他们合唱!我想和你唱特辑",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover2.jpg",
+      "playCount": 1730000,
+      "text": "[民谣与诗]晴空与海潮交织的韵和乐章",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover3.jpg",
+      "playCount": 2740000,
+      "text": "[古风女声]扶柔倾国色，风华绝世人",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover4.jpg",
+      "playCount": 49173,
+      "text": "应念岭表经年，肝胆皆冰雪",
+      "isFM": true
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover5.jpg",
+      "playCount": 640000,
+      "text": "[二次元女声]精致的搭配，绘构了美好",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover6.jpg",
+      "playCount": 23489,
+      "text": "明快、优雅--海顿C大调大提琴协奏曲",
+      "isFM": true
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover7.jpg",
+      "playCount": 28810,
+      "text": "[华语民谣]最执着的原创民谣歌手/刘健",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover8.jpg",
+      "playCount": 44291,
+      "text": "主播朵儿：有用的人，不怕长得丑-晚睡",
+      "isFM": true
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover5.jpg",
+      "playCount": 1160000,
+      "text": "粤语|愿花光所有运气，在有生瞬间能遇到你",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover6.jpg",
+      "playCount": 710000,
+      "text": "决战高考，致敬青春：高考是一场青春的战役",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover7.jpg",
+      "playCount": 950000,
+      "text": "左右人声不同的双声道系列√",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover8.jpg",
+      "playCount": 37181,
+      "text": "《重新定义公司》：为什么90后员工很难管",
+      "isFM": true
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover9.jpg",
+      "playCount": 150000,
+      "text": "「声控福利」让人耳朵怀孕的剧情歌",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover10.jpg",
+      "playCount": 11137,
+      "text": "探险手札050",
+      "isFM": true
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover11.jpg",
+      "playCount": 2850000,
+      "text": "【日系/女声】至美天籁 咏唱灵魂幻化的音符",
+      "isFM": false
+    },
+    {
+      "playlistId": "",
+      "coverImageSrc": "/images/covers/cover12.jpg",
+      "playCount": 770000,
+      "text": "找一个非常想爱的人结婚",
+      "isFM": true
+    }
+  ]
+}

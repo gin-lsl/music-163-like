@@ -1,0 +1,16 @@
+<div class="r-h-d-p">
+  <h3>热门DJ</h3>
+  <ul class="body">
+    <li ng-repeat="_nm in rhdp.musicians">
+      <a href="" class="cover">
+        <img ng-src="{{ _nm.avatar }}" alt="">
+      </a>
+      <div class="info">
+        <p class="f-thide">
+          <a href="">{{ _nm.username }}</a>
+        </p>
+        <p class="f-thide">{{ _nm.djDescribe }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

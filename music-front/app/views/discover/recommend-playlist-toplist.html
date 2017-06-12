@@ -1,0 +1,107 @@
+<div class="r-p-t">
+  <div class="r-p-t-h">
+    <a class="head">榜单</a>
+    <span class="more">
+      <a href="">更多</a>
+      <i></i>
+    </span>
+  </div>
+  <div class="h-group">
+    <dl class="h-group-item">
+      <dt class="top">
+        <div class="cover">
+          <a href="">
+            <img src="/images/utils/bcugbh.jpg" alt="">
+          </a>
+        </div>
+        <div class="tit">
+          <a href="">云音乐飙升榜</a>
+          <div class="btns">
+            <a href="" class="play bg-index" title="播放">播放</a>
+            <a href="" class="collect" title="收藏">收藏</a>
+          </div>
+        </div>
+      </dt>
+      <dd class="content">
+        <ol>
+          <li ng-repeat="_tp in rpt.topPlaylists" ng-class-odd="'stripe-dark'">
+            <span ng-class="{ 'very-top': $index < 3 }">{{ $index + 1 }}</span>
+            <a class="h-u-l f-thide m-nm" href="" title="{{ _tp.name }}">{{ _tp.name }}</a>
+            <div class="over-actions">
+              <a href="" title="播放">播放</a>
+              <a href="" title="添加到播放列表">添加到播放列表</a>
+              <a href="" title="收藏">收藏</a>
+            </div>
+          </li>
+          <li class="more stripe-dark">
+            <a class='h-u-l' href="">查看全部&gt;</a>
+          </li>
+        </ol>
+      </dd>
+    </dl>
+    <dl class="h-group-item">
+      <dt class="top">
+        <div class="cover">
+          <a href="">
+            <img src="/images/utils/xngebh.jpg" alt="">
+          </a>
+        </div>
+        <div class="tit">
+          <a href="">云音乐新歌榜</a>
+          <div class="btns">
+            <a href="" class="play bg-index" title="播放">播放</a>
+            <a href="" class="collect" title="收藏">收藏</a>
+          </div>
+        </div>
+      </dt>
+      <dd class="content">
+        <ol>
+          <li ng-repeat="_tp in rpt.topPlaylists" ng-class-odd="'stripe-dark'">
+            <span ng-class="{ 'very-top': $index < 3 }">{{ $index + 1 }}</span>
+            <a class='h-u-l f-thide m-nm' href="" title="{{ _tp.name }}">{{ _tp.name }}</a>
+            <div class="over-actions">
+              <a href="" title="播放">播放</a>
+              <a href="" title="添加到播放列表">添加到播放列表</a>
+              <a href="" title="收藏">收藏</a>
+            </div>
+          </li>
+          <li class="more stripe-dark">
+            <a class='h-u-l' href="">查看全部&gt;</a>
+          </li>
+        </ol>
+      </dd>
+    </dl>
+    <dl class="h-group-item">
+      <dt class="top">
+        <div class="cover">
+          <a href="">
+            <img src="/images/utils/yridbh.jpg" alt="">
+          </a>
+        </div>
+        <div class="tit">
+          <a href="">网易原创歌曲榜</a>
+          <div class="btns">
+            <a href="" class="play bg-index" title="播放">播放</a>
+            <a href="" class="collect" title="收藏">收藏</a>
+          </div>
+        </div>
+      </dt>
+      <dd class="content">
+        <ol>
+          <li ng-repeat="_tp in rpt.topPlaylists" ng-class-odd="'stripe-dark'">
+            <span ng-class="{ 'very-top': $index < 3 }">{{ $index + 1 }}</span>
+            <a class='h-u-l f-thide m-nm' href="" title="{{ _tp.name }}">{{ _tp.name }}</a>
+            <div class="over-actions">
+              <a href="" title="播放">播放</a>
+              <a href="" title="添加到播放列表">添加到播放列表</a>
+              <a href="" title="收藏">收藏</a>
+            </div>
+          </li>
+          <li class="more stripe-dark">
+            <a class='h-u-l' href="">查看全部&gt;</a>
+          </li>
+        </ol>
+      </dd>
+    </dl>
+  </div>
+</div>

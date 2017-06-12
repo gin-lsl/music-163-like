@@ -1,0 +1,19 @@
+<div class="discover outer-wrap" ng-style="{'background-color': discover.jumbotronImages[discover.currentIndex].bgColor}">
+  <div class="wrap">
+    <a ng-click="discover.prevJumbotron()" class="switch-jumbotron prev-jumbotron">&lt;</a>
+    <a class="jumbotron">
+        <img ng-src="{{ discover.jumbotronImages[discover.currentIndex].src }}" alt="xxx">
+      </a>
+    <div class="download">
+      <a id="side-download" role="button">下载客户端</a>
+      <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+    </div>
+    <a ng-click="discover.nextJumbotron()" class="switch-jumbotron next-jumbotron">&gt;</a>
+    <div class="dots">
+      <a ng-repeat="_dot in discover.jumbotronImages">
+        <span ng-click='discover.goJumbotron($index)' ng-class='{ active: discover.currentIndex == $index }'></span>
+      </a>
+    </div>
+  </div>
+</div>
+<recommend-playlist></recommend-playlist>

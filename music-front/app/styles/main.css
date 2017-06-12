@@ -1,0 +1,192 @@
+@import 'nav-bar-top.css';
+@import 'discover.css';
+@import 'playlist-cover.css';
+@import 'recommend-playlist.css';
+@import 'playlist-or-album.css';
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+body {
+  padding: 0;
+}
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+*[role=button] {
+  cursor: pointer;
+}
+ul, ol, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+a.h-u-l:hover {
+  text-decoration: underline;
+}
+.f-thide {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -ms-word-wrap: normal;
+  word-wrap: normal;
+}
+.pull-right {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+body, textarea, select, input, button {
+  color: #333;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  /*padding-left: 15px;
+  padding-right: 15px;*/
+}
+
+/* Custom page header */
+.header {
+  /*border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;*/
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  /*margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;*/
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  height: 140px;
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.container {
+  background-color: #F5F5F5;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    /*max-width: 730px;*/
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    /*margin-bottom: 30px;*/
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.bg-index {
+  background: url('/images/utils/index.png') no-repeat;
+}
+.bg-icon {
+  background: url('/images/utils/icon.png') no-repeat;
+}
+.footer {
+  background-color: #F5F5F5;
+}
+.footer .main-footer {
+  clear: both;
+  overflow: hidden;
+  width: 980px;
+  margin: 0 auto;
+}
+.footer .copy {
+  float: left;
+  width: 490px;
+  padding-top: 35px;
+  line-height: 24px;
+}
+.footer .copy a {
+  color: #999;
+}
+.footer .copy .split-line {
+  margin: 0 8px 0 10px;
+  color: #C2C2C2;
+}
+.footer .some {
+  width: 330px;
+  margin-top: 21px;
+  float: right;
+}
+.footer .some a {
+  float: left;
+  width: 60px;
+  height: 70px;
+  text-indent: -9999px;
+  background: url('/images/utils/foot_enter.png');
+  margin-left: 30px;
+}
+.footer .footer-logo-musician {
+  margin-left: 0!important;
+  background-position: -60px -80px!important;
+}
+.footer .footer-logo-topic {
+  background-position: 0 -80px!important;
+}
+.footer .footer-logo-midea {
+  background-position: 0 0!important;
+}
+.footer .footer-logo-reward {
+  background-position: -60px 0!important;
+}

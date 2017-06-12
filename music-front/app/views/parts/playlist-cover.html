@@ -1,0 +1,15 @@
+<div class="playlist-cover" ng-if="playlistInfo">
+  <div class="cover">
+    <img ng-src="{{ playlistInfo.coverImageSrc }}" alt="">
+    <a ng-href="{{ '/#!/playlist/34298fjwej32fd' }}"></a>
+    <div class="bottom">
+      <a ng-href="{{ '/#!/playlist/34298fjwej32fd' }}"></a>
+      <span></span>
+      <span>{{ playlistInfo.playCount | wan }}</span>
+    </div>
+  </div>
+  <p class="dec">
+    <i class="is-fm" ng-if="playlistInfo.isFM">电台节目</i>
+    <a href="">{{ playlistInfo.text }}</a>
+  </p>
+</div>

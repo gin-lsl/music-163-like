@@ -1,0 +1,265 @@
+.p-o-a {
+  width: 980px;
+  min-height: 700px;
+  _height: 700px;
+  margin: 0 auto;
+  clear: both;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border: 1px solid #D3D3D3;
+}
+.p-o-a .left {
+  float: left;
+  width: 100%;
+  margin-right: -270px;
+}
+.p-o-a .left-inner {
+  margin-right: 210px;
+  padding: 47px 30px 40px 39px;
+}
+.p-o-a .info-content {
+  margin-top: 27px;
+}
+.p-o-a .info-content .head {
+  height: 33px;
+  border-bottom: 2px solid #C20C0C;
+}
+.p-o-a .info-content h3 {
+  font-size: 20px;
+  line-height: 28px;
+  float: left;
+  font-weight: normal;
+}
+.p-o-a .info-content h3 span {
+  color: #333;
+}
+.p-o-a .info-content .songs-count {
+  float: left;
+  margin: 9px 0 0 20px;
+  color: #666;
+}
+.p-o-a .info-content .more {
+  margin-top: 5px;
+  float: right;
+  color: #666;
+}
+.p-o-a .info-content .out-list {
+  margin-right: 20px;
+  float: right;
+  margin-top: 5px;
+}
+.p-o-a .songs-table {
+  width: 100%;
+  border: 1px solid #D3D3D3;
+  border-top: 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.p-o-a .songs-table thead {
+  border-bottom: 1px solid lightgrey;
+  box-shadow: 0 2px 2px lightgrey;
+}
+.p-o-a .songs-table th {
+  height: 36px;
+  background-color: #F7F7F7;
+  vertical-align: top;
+  text-align: left;
+  font-weight: normal;
+  color: #666;
+}
+.p-o-a .songs-table .wp {
+  height: 36px;
+  line-height: 22px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border-left: 1px solid lightgrey;
+  background: -webkit-linear-gradient(#FFF, #F1F1F1);
+  background: -moz-linear-gradient(#FFF, #F1F1F1);
+  background: -o-linear-gradient(#FFF, #F1F1F1);
+  background: linear-gradient(#FFF, #F1F1F1);
+}
+.p-o-a .songs-table td * {
+  color: #333;
+}
+.p-o-a .songs-table .w1 div {
+  border-left: 0;
+}
+.p-o-a .songs-table .w1 {
+  width: 74px;
+}
+.p-o-a .songs-table .w3 {
+  width: 111px;
+}
+.p-o-a .songs-table .w4 {
+  width: 14%;
+}
+.p-o-a .songs-table .w5 {
+  width: 20%;
+}
+.p-o-a .side {
+  float: right;
+  right: 0;
+  top: 0;
+  width: 210px;
+}
+.p-o-a .side .side-wrap {
+  padding: 20px 40px 40px 30px;
+}
+.p-o-a .songs-table .even {
+  background-color: #F7F7F7;
+}
+.p-o-a .songs-table td {
+  padding: 6px 10px;
+  line-height: 18px;
+  text-align: left;
+}
+.p-o-a .songs-table .play {
+  float: right;
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  background-position: -45px -635px;
+}
+.p-o-a .ttc {
+  height: 18px;
+  margin-right: 20px;
+}
+.p-o-a .txt {
+  display: inline-block;
+  position: relative;
+  padding-right: 25px;
+  margin-right: -25px;
+  max-width: 99%;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.p-o-a .text {
+  width: 100%;
+  position: relative;
+  zoom: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.p-o-a b {
+  font-weight: normal;
+}
+.p-o-a .songs-table a:hover {
+  text-decoration: underline;
+}
+.p-o-a .out-list a {
+  color: #4996D1;
+  text-decoration: underline;
+}
+.p-o-a .more strong {
+  color: #C20C0C;
+}
+.p-o-a .comments {
+  margin-top: 40px;
+}
+.p-o-a .c-count {
+  float: left;
+  margin: 9px 0 0 20px;
+}
+.p-o-a .comments-list {
+  margin-top: 20px;
+}
+.p-o-a .write-comment {
+  margin-bottom: 20px;
+}
+.p-o-a .write-comment .avatar,
+.p-o-a .write-comment .avatar img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: -100px;
+}
+.p-o-a .write-inner {
+  margin-left: 62px;
+  position: relative;
+  zoom: 1;
+}
+.p-o-a .textarea-wrap {
+  position: relative;
+  zoom: 1;
+  padding-right: 14px;
+}
+.p-o-a .textarea-wrap textarea {
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  margin-right: -20px;
+  padding: 5px 6px 6px;
+  border: 1px solid #CDCDCD;
+  border-radius: 2px;
+  line-height: 19px;
+}
+.p-o-a .btns {
+  clear: both;
+  overflow: hidden;
+  padding-top: 10px;
+  position: relative;
+  zoom: 1;
+}
+.p-o-a .bg-icon {
+  float: left;
+  margin: 3px 10px 0 0;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+.p-o-a .face {
+  background-position: -40px -490px;
+}
+.p-o-a .at {
+  background-position: -60px -490px;
+}
+.p-o-a .u-btn {
+  float: right;
+  width: 46px;
+  height: 25px;
+  color: #FFF;
+  text-align: center;
+  line-height: 25px;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(#4592DB, #1D6FBF);
+  background: -moz-linear-gradient(#4592DB, #1D6FBF);
+  background: -o-linear-gradient(#4592DB, #1D6FBF);
+  background: linear-gradient(#4592DB, #1D6FBF);
+}
+.p-o-a .write-count {
+  float: right;
+  margin-right: 10px;
+  line-height: 25px;
+  color: #999;
+}
+.p-o-a .corr {
+  position: absolute;
+  top: 11px;
+  left: -7px;
+  width: 13px;
+  height: 14px;
+  overflow: hidden;
+}
+.p-o-a .arrline,
+.p-o-a .arrclr {
+  display: block;
+  font-family: 'SimSun';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: normal;
+  height: 10px;
+  line-height: normal;
+}
+.p-o-a .arrclr {
+  margin: -10px 0 0 1px;
+  _margin-top: 17px;
+  color: #FFF;
+}
+.p-o-a .arrline {
+  color: #CDCDCD;
+}

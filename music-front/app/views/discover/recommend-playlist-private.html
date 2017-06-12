@@ -1,0 +1,22 @@
+<div class="r-p-p">
+  <div class="r-p-p-h">
+    <a class="head">个性化推荐</a>
+  </div>
+  <div class="list">
+    <div class="date">
+      <a href="/#!/discover/recommend/taste" title="每日歌曲推荐">
+        <span class="head" title="每日歌曲推荐">星期一</span>
+        <span class="mark" title="每日歌曲推荐">1</span>
+      </a>
+      <p class="dec">每日歌曲推荐</p>
+      <p class="bottom" title="根据你的口味生成，每天6:00更新">
+        根据你的口味生成，
+        <br>
+        每天6:00更新
+      </p>
+    </div>
+    <div ng-repeat="_playlist in rpp.pls">
+      <playlist-cover playlist='_playlist'></playlist-cover>
+    </div>
+  </div>
+</div>

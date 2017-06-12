@@ -1,0 +1,19 @@
+<div class="r-p-n">
+  <div class="r-p-n-h">
+    <a class="head">新碟上架{{ rpn.clazz[1] }}</a>
+  </div>
+  <div class="body">
+    <div class="inner">
+      <a ng-hide="rpn.inLeft" role="button" class="to-left" ng-click="rpn.rollLeft()">&lt;</a>
+      <div class="list">
+        <div ng-class="['sub-list', 'e1']" ng-style='rpn.styles[0]'>
+          <playlist-cover-small ng-repeat="_ff in rpn.plsLeft" playlist='_ff'></playlist-cover-small>
+        </div>
+        <div ng-class="['sub-list', 'e2']" ng-style='rpn.styles[1]'>
+          <playlist-cover-small ng-repeat="_fr in rpn.plsRight" playlist='_fr'></playlist-cover-small>
+        </div>
+      </div>
+      <a ng-show="rpn.inLeft" role="button" class="to-right" ng-click="rpn.rollRight()">&gt;</a>
+    </div>
+  </div>
+</div>

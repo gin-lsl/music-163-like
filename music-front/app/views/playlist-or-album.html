@@ -1,0 +1,151 @@
+<div class="p-o-a">
+  <div class="left">
+    <div class="left-inner">
+      <div class="info-top">
+      </div>
+      <div class="info-content">
+        <div class="head">
+          <h3><span>歌曲列表</span></h3>
+          <span class="songs-count">{{ pc.songs.length }}首歌</span>
+          <div class="more">播放：<strong>{{ 12384213 }}</strong>次</div>
+          <div class="out out-list">
+            <i class="icon"></i>
+            <a href="">生成外链播放器</a>
+          </div>
+        </div>
+        <div class="songs" oncopy='return false;' oncut='return false;'>
+          <table class="songs-table">
+            <thead>
+              <tr>
+                <th class="w1">
+                  <div class="wp">&nbsp;</div>
+                </th>
+                <th class="w2">
+                  <div class="wp">歌曲标题</div>
+                </th>
+                <th class="w3">
+                  <div class="wp">时长</div>
+                </th>
+                <th class="w4">
+                  <div class="wp">歌手</div>
+                </th>
+                <th class="w5">
+                  <div class="wp">专辑</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="_song in pc.songs" ng-class-odd="'even'">
+                <td class="nr">
+                  <div class="hd">
+                    <span class="bg-icon play">&nbsp;</span>
+                    <span class="num">{{ $index + 1 }}</span>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <div class="tt">
+                      <div class="ttc">
+                        <span class="txt">
+                          <a href=""><b title="{{ _song.name }}">{{ _song.name }}</b></a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <span class="u-dur">{{ _song.time }}</span>
+                  <div class="opt hshow">
+                    <a href="" class="icon add" title="添加到播放列表"></a>
+                    <span class="icon collect" title="收藏"></span>
+                    <span class="icon share" title="分享"></span>
+                    <span class="icon download" title="下载"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="text" title="{{ _song.musician }}">
+                    <span title="{{ _song.musician }}">
+                      <a href="">{{ _song.musician }}</a>
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <div class="text">
+                    <a href="" title="{{ _song.album }}">{{ _song.album }}</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="comments">
+          <div class="comments-inner">
+            <div class="head">
+              <h3>
+                <span>评论</span>
+              </h3>
+              <span class="c-count">
+                共 {{ pc.comments.length }} 条评论
+              </span>
+            </div>
+            <div class="comments-list">
+              <section class="write-comment">
+                <div class="avatar">
+                  <img ng-src="/images/users/a.jpg" alt="">
+                </div>
+                <div class="j-flag">
+                  <div>
+                    <div class="write-inner">
+                      <div class="textarea-wrap">
+                        <textarea ng-model="pc.writeContent" class='u-txt area' placeholder="评论" id="comment-write-field"></textarea>
+                      </div>
+                      <div class="btns">
+                        <i class="bg-icon face"></i>
+                        <i class="bg-icon at"></i>
+                        <a href="" class="btn u-btn">评论</a>
+                        <span class="write-count">{{ pc.writeCount }}</span>
+                      </div>
+                      <div class="corr">
+                        <em class="arrline">◆</em>
+                        <span class="arrclr">◆</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="hot-comments">
+                <h3>精彩评论</h3>
+                <!--<article ng-repeat="_comment in pc.comments | filter: '-upCount > 10'">
+                  <div>
+                    {{ _comment.content }}
+                  </div>
+                  <div>
+                    {{ _comment.upCount }}
+                  </div>
+                </article>-->
+                <!--<div>
+                  {{ pc.hots }}
+                </div>-->
+                <article ng-repeat="_hot in pc.hots
+                ">
+                  {{ _hot.content }}
+                </article>
+              </section>
+              <section class="all-comments">
+                <h3>最新评论</h3>
+                <article ng-repeat="_comment in pc.comments">
+                  {{ _comment.content }}
+                </article>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="side">
+    <div class="side-wrap">
+
+    </div>
+  </div>
+</div>
