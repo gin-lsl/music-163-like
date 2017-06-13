@@ -7,7 +7,7 @@
  * # navbarTop
  */
 angular.module('musicFrontApp')
-  .directive('navBarTop', ['$http', 'appName', 'userService', function ($http, appName, userService) {
+  .directive('navBarTop', ['$http', 'appName', 'userService', 'authService', function ($http, appName, userService, authService) {
     return {
       templateUrl: 'views/nav-bar-top.html',
       restrict: 'E',
@@ -17,6 +17,8 @@ angular.module('musicFrontApp')
       controllerAs: 'navBarTopCtrl',
       controller: function () {
         var vm = this
+        vm.user = authService.user
+        vm.add = authService.add
         vm.currentUser = null
         vm.test = 'hehe in directive'
         vm.appName = appName
@@ -48,6 +50,9 @@ angular.module('musicFrontApp')
           vm.currentActiveIndex = _index
         }
 
+        var _currentUserInfo
+        var _currentUserHasLogin = false
+
         vm.activeSub = function (_sub) {
           vm.navs[vm.currentActiveIndex].subs.map(function (_ele) {
             _ele.active = false
@@ -57,9 +62,17 @@ angular.module('musicFrontApp')
         $http.get('http://localhost:5500/users/368da9d06c6aea72')
           .then(function (data) {
             console.log(data)
+            _currentUserInfo = data.data
+            _currentUserHasLogin = true
             userService.setCurrentUser(data.data)
             vm.currentUser = userService.getCurrentUser()
           })
+        vm.toggleCurrentUser = function () {
+          console.log('_currentUserHasLogin: ' + _currentUserHasLogin)
+          userService.setCurrentUser(_currentUserHasLogin ? _currentUserInfo : null)
+          vm.currentUser = _currentUserHasLogin ? _currentUserInfo : null
+          _currentUserHasLogin = !_currentUserHasLogin
+        }
 
       },
     };

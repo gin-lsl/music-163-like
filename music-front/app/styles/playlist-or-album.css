@@ -14,7 +14,7 @@
   margin-right: -270px;
 }
 .p-o-a .left-inner {
-  margin-right: 210px;
+  margin-right: 270px;
   padding: 47px 30px 40px 39px;
 }
 .p-o-a .info-content {
@@ -101,10 +101,51 @@
   float: right;
   right: 0;
   top: 0;
-  width: 210px;
+  width: 270px;
 }
-.p-o-a .side .side-wrap {
+.p-o-a .side-inner {
   padding: 20px 40px 40px 30px;
+}
+.p-o-a .side h3 {
+  position: relative;
+  height: 23px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #CCC;
+  color: #333;
+}
+.p-o-a .rct {
+  clear: both;
+  overflow: hidden;
+}
+.p-o-a .rct-list {
+  margin-bottom: 25px;
+}
+.p-o-a .rct-list li {
+  float: left;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 15px;
+  line-height: 24px;
+}
+.p-o-a .rct-list .avatar {
+  margin-right: -60px;
+}
+.p-o-a .rct-info {
+  margin-left: 60px;
+}
+.p-o-a .rct-title {
+  font-size: 14px;
+  color: black;
+}
+.p-o-a .by {
+  float: left;
+  color: #999;
+}
+.p-o-a .rct-username {
+  float: left;
+  max-width: 106px;
+  font-size: 12px;
+  margin: 0 4px 0 2px;
 }
 .p-o-a .songs-table .even {
   background-color: #F7F7F7;
@@ -170,8 +211,9 @@
 .p-o-a .write-comment {
   margin-bottom: 20px;
 }
-.p-o-a .write-comment .avatar,
-.p-o-a .write-comment .avatar img {
+.p-o-a .avatar,
+.p-o-a .avatar a,
+.p-o-a .avatar img {
   float: left;
   width: 50px;
   height: 50px;
@@ -236,6 +278,8 @@
   margin-right: 10px;
   line-height: 25px;
   color: #999;
+  font-size: 14px;
+  font-weight: bold;
 }
 .p-o-a .corr {
   position: absolute;
@@ -262,4 +306,108 @@
 }
 .p-o-a .arrline {
   color: #CDCDCD;
+}
+.p-o-a .comments-list h3 {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #CFCFCF;
+}
+.p-o-a .comments-list article {
+  clear: both;
+  overflow: hidden;
+  padding: 15px 0;
+  border-top: 1px dotted #CCC;
+}
+.p-o-a .cntwrap {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 60px;
+}
+.p-o-a .cnt {
+  width: 100%;
+  overflow: hidden;
+  line-height: 20px;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+.p-o-a .username {
+  color: #0C73C2;
+}
+.p-o-a .rp {
+  margin-top: 15px;
+  text-align: right;
+}
+.p-o-a .rp .time {
+  float: left;
+  color: #999;
+}
+.p-o-a .rp .zan {
+  display: inline-block;
+  width: 15px;
+  height: 14px;
+  background-position: -150px 0;
+}
+.p-o-a .sep {
+  margin: 0 8px;
+  color: #CCC;
+}
+.p-o-a .reply-to {
+  position: relative;
+  zoom: 1;
+  padding: 8px 19px;
+  margin-top: 10px;
+  line-height: 20px;
+  background: #F4F4F4;
+  border: 1px solid #DEDEDE;
+  color: #666;
+  word-break: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.p-o-a .pagination .pagination-inner {
+  display: table; /*去除 a 的间距*/
+  margin: 20px auto;
+  text-align: center;
+}
+.p-o-a .pagination .cnp {
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  min-width: 15px;
+  color: black;
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  margin: 0 2px;
+  padding: 0 5px;
+  word-spacing: 0; /*去除 a 的间距*/
+  cursor: pointer;
+}
+.p-o-a .pagination .pre,
+.p-o-a .pagination .next {
+  background: -webkit-linear-gradient(#F9F9F9, #E6E6E6);
+  background: -moz-linear-gradient(#F9F9F9, #E6E6E6);
+  background: -o-linear-gradient(#F9F9F9, #E6E6E6);
+  background: linear-gradient(#F9F9F9, #E6E6E6);
+}
+.p-o-a .pagination .current {
+  color: #FFFFFF;
+  background: -webkit-linear-gradient(#E1151D, #C40A0F);
+  background: -moz-linear-gradient(#E1151D, #C40A0F);
+  background: -o-linear-gradient(#E1151D, #C40A0F);
+  background: linear-gradient(#E1151D, #C40A0F);
+  cursor: default;
+}
+.p-o-a .pagination .disabled {
+  cursor: default;
+  color: #CACACA;
+  border-color: #CCCCCC;
+  background: -webkit-linear-gradient(#F5F5F5, #E8E8E8);
+  background: -moz-linear-gradient(#F5F5F5, #E8E8E8);
+  background: -o-linear-gradient(#F5F5F5, #E8E8E8);
+  background: linear-gradient(#F5F5F5, #E8E8E8);
 }

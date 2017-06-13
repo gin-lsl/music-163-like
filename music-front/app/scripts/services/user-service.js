@@ -10,11 +10,14 @@
 angular.module('musicFrontApp')
   .constant('userUrl', 'http://localhost:5500/users/')
   .factory('userService', [function () {
-    var currentUser = null
+    var currentUser = {
+    }
     var setCurrentUser = function (_user) {
+      console.log('_user: %O', _user)
       currentUser = _user
     }
     var getCurrentUser = function () {
+      console.log('获取userService: %O', currentUser)
       return currentUser
     }
     return {

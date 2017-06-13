@@ -19,13 +19,13 @@
         </ul>
         <div class="navbar-top-head">
           <div class="navbar-top-head-wrap">
-            <a>
+            <a ng-click="navBarTopCtrl.toggleCurrentUser()">
               <img ng-src="{{ navBarTopCtrl.currentUser.avatar }}" width="70" height="70" alt="head" title="{{ navBarTopCtrl.currentUser.username }}">
             </a>
           </div>
           <div class="navbar-top-head-actions-list">
-            <div>
-              我的主页
+            <div ng-click="navBarTopCtrl.add()">
+              我的主页{{ navBarTopCtrl.user.name + ': ' + navBarTopCtrl.user.count }}
             </div>
             <div>
               我的等级

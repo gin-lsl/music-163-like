@@ -8,11 +8,60 @@ angular.module('musicFrontApp')
    * # PlaylistCtrl
    * Controller of the musicFrontApp
    */
-  .controller('PlaylistCtrl', ['$http', function ($http) {
+  .controller('PlaylistCtrl', ['$http', 'authService', function ($http, authService) {
     var vm = this
-    vm.writeContent = '呵呵'
-    vm.writeCount = 140 - vm.writeContent.length
-    vm.list = []
+    // 当前页
+    vm.currentPage = 1
+    vm.user = authService.user
+    // 评论内容
+    vm.writeContent = ''
+    // 每页的条目数
+    vm.prePageItemCount = 10
+
+    /**
+     * 计算还可以添加的字数
+     */
+    vm.computeWriteCount = function () {
+      return 140 - vm.writeContent.length
+    }
+
+    /**
+     * 计算可输入文字字数的颜色
+     */
+    vm.computeWriteCountColor = function () {
+      var _length = 140 - vm.writeContent.length
+      if (_length > 15) { return { color: '#999' } }
+      if (_length > 0) { return { color: '#F98C01' } }
+      return { color: 'red' }
+    }
+
+    /**
+     * 显示当前页码需要显示的评论数据
+     */
+    vm.computeCurrentPageShowComments = function () {
+      var _len = (vm.currentPage - 1) * 10
+      return vm.comments.slice(_len, _len + 10)
+    }
+
+    /**
+     * 获取页数
+     */
+    vm.computePageCount = function () {
+      var ret = []
+      var _len = Math.ceil(vm.comments.length / vm.prePageItemCount)
+      for (var _i = 0; _i < _len; _i++) {
+        ret.push(_i + 1)
+      }
+      return ret
+    }
+
+    /**
+     * 切换页码
+     */
+    vm.changePage = function (willPage) {
+      vm.currentPage = willPage
+    }
+
     vm.comments = [
       {
         id: '001',
@@ -29,6 +78,14 @@ angular.module('musicFrontApp')
         content: '很早的INS照片……',
         postDateTime: Date.now(),
         upCount: 0,
+        replyToComment: {
+          id: '001',
+          userid: '',
+          username: '-淡络',
+          content: '真心羡慕你们，能够把那些长得一样一样的网红准确的分清楚谁是谁',
+          postDateTime: Date.now(),
+          upCount: 0,
+        },
       },
       {
         id: '003',

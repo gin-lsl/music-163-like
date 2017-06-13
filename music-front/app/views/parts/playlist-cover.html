@@ -1,9 +1,9 @@
 <div class="playlist-cover" ng-if="playlistInfo">
   <div class="cover">
     <img ng-src="{{ playlistInfo.coverImageSrc }}" alt="">
-    <a ng-href="{{ '/#!/playlist/34298fjwej32fd' }}"></a>
+    <a ng-href="{{ '/playlist/34298fjwej32fd' | ngHrefPrefix }}"></a>
     <div class="bottom">
-      <a ng-href="{{ '/#!/playlist/34298fjwej32fd' }}"></a>
+      <a ng-href="{{ '/playlist/34298fjwej32fd' | ngHrefPrefix }}"></a>
       <span></span>
       <span>{{ playlistInfo.playCount | wan }}</span>
     </div>

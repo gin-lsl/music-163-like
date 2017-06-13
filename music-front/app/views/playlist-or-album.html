@@ -10,7 +10,7 @@
           <div class="more">播放：<strong>{{ 12384213 }}</strong>次</div>
           <div class="out out-list">
             <i class="icon"></i>
-            <a href="">生成外链播放器</a>
+            <a ng-click="pc.testAdd()" href="">生成外链播放器</a>
           </div>
         </div>
         <div class="songs" oncopy='return false;' oncut='return false;'>
@@ -97,13 +97,13 @@
                   <div>
                     <div class="write-inner">
                       <div class="textarea-wrap">
-                        <textarea ng-model="pc.writeContent" class='u-txt area' placeholder="评论" id="comment-write-field"></textarea>
+                        <textarea ng-model="pc.writeContent" name='writeContent' class='u-txt area' placeholder="评论" id="comment-write-field"></textarea>
                       </div>
                       <div class="btns">
                         <i class="bg-icon face"></i>
                         <i class="bg-icon at"></i>
                         <a href="" class="btn u-btn">评论</a>
-                        <span class="write-count">{{ pc.writeCount }}</span>
+                        <span class="write-count" ng-style="pc.computeWriteCountColor()">{{ pc.computeWriteCount() }}</span>
                       </div>
                       <div class="corr">
                         <em class="arrline">◆</em>
@@ -113,30 +113,81 @@
                   </div>
                 </div>
               </section>
-              <section class="hot-comments">
+              <section class="hot-comments" ng-show="pc.currentPage == 1">
                 <h3>精彩评论</h3>
-                <!--<article ng-repeat="_comment in pc.comments | filter: '-upCount > 10'">
-                  <div>
-                    {{ _comment.content }}
+                <article ng-repeat="_hot in pc.hots">
+                  <div class="avatar">
+                    <a href="">
+                      <img src="/images/users/a.jpg" alt="{{ _hot.username }}">
+                    </a>
                   </div>
-                  <div>
-                    {{ _comment.upCount }}
+                  <div class="cntwrap">
+                    <div>
+                      <div class="cnt">
+                        <a href="" class="username h-u-l">{{ _hot.username }}</a>：{{ _hot.content }}
+                      </div>
+                    </div>
+                    <div ng-if="_hot.replyToComment" class="reply-to">
+                      <a href="" class="username h-u-l">{{ _hot.replyToComment.username }}</a>：{{ _hot.replyToComment.content }}
+                    </div>
+                    <div class="rp">
+                      <div class="time">{{ _hot.postDateTime | myDate }}</div>
+                      <a href="" class="h-u-l">
+                        <i class="bg-icon2 zan"></i>
+                        ({{ _hot.upCount }})
+                      </a>
+                      <span class="sep">|</span>
+                      <a href="" class="reply h-u-l">回复</a>
+                    </div>
                   </div>
-                </article>-->
-                <!--<div>
-                  {{ pc.hots }}
-                </div>-->
-                <article ng-repeat="_hot in pc.hots
-                ">
-                  {{ _hot.content }}
                 </article>
               </section>
               <section class="all-comments">
                 <h3>最新评论</h3>
-                <article ng-repeat="_comment in pc.comments">
-                  {{ _comment.content }}
+                <article ng-repeat="_comment in pc.computeCurrentPageShowComments()">
+                  <div class="avatar">
+                    <a href="">
+                      <img src="/images/users/a.jpg" alt="{{ _comment.username }}">
+                    </a>
+                  </div>
+                  <div class="cntwrap">
+                    <div>
+                      <div class="cnt">
+                        <a href="" class="username h-u-l">{{ _comment.username }}</a>：{{ _comment.content }}
+                      </div>
+                    </div>
+                    <div ng-if="_comment.replyToComment" class="reply-to">
+                      <a href="" class="username h-u-l">{{ _comment.replyToComment.username }}</a>：{{ _comment.replyToComment.content }}
+                    </div>
+                    <div class="rp">
+                      <div class="time">{{ _comment.postDateTime | myDate }}</div>
+                      <a href="" class="h-u-l">
+                        <i class="bg-icon2 zan"></i>
+                        ({{ _comment.upCount }})
+                      </a>
+                      <span class="sep">|</span>
+                      <a href="" class="reply h-u-l">回复</a>
+                    </div>
+                  </div>
                 </article>
               </section>
+              <div class="pagination">
+                <div class="pagination-inner">
+                  <a class="cnp pre"
+                    ng-class="{ 'disabled': pc.currentPage == 1 }"
+                    ng-disabled="pc.currentPage == 1"
+                    ng-click="pc.changePage(pc.currentPage - 1)">&lt; 上一页</a>
+                  <a ng-repeat="_i in pc.computePageCount()"
+                    ng-class="{ 'current': pc.currentPage == _i }"
+                    class="cnp cp"
+                    ng-disabled="pc.currentPage == _i"
+                    ng-click="pc.changePage(_i)">{{ _i }}</a>
+                  <a class="cnp next"
+                    ng-class="{ 'disabled': pc.currentPage == pc.computePageCount().length }"
+                    ng-disabled="pc.currentPage == pc.computePageCount().length"
+                    ng-click="pc.changePage(pc.currentPage + 1)">下一页 &gt;</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -144,8 +195,35 @@
     </div>
   </div>
   <div class="side">
-    <div class="side-wrap">
-
+    <div class="side-inner">
+      <section class="rct">
+        <h3>
+          <span>相关推荐</span>
+        </h3>
+        <ul class="rct-list">
+          <li>
+            <div class="avatar">
+              <a>
+                <img src="/images/users/a.jpg" alt="">
+              </a>
+            </div>
+            <div class="rct-info">
+              <p class="f-thide">
+                <a class="h-u-l rct-title" title="只要能遇见你，就不怕姗姗来迟">只要能遇见你，就不怕姗姗来迟</a>
+              </p>
+              <p class="f-thide">
+                <span class="by">by</span>
+                <a class="h-u-l f-thide rct-username" href="" title="不会开挖掘机好丢脸">不会开挖掘机好丢脸</a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>
+          <span>网易云音乐多端下载</span>
+        </h3>
+      </section>
     </div>
   </div>
 </div>
